@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { signInStart, signInSuccess, signInFailure } from '../redux/user/userslice';
+import OAuth from '../components/OAuth';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ export default function Login() {
           { loading ? 'Loading ...' : 'LogIn' }
         </button>
       </form>
+      <OAuth/>
       <div className="flex gap-2 mt-5">
         <p>Dont have an account ?</p>
           <NavLink to={"/signup"}>
